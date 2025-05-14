@@ -1,7 +1,7 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
   BASE:
-  - {t: TAB, h: LC(LS(LALT))}
+  - '&tabESC'
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '-'
-  - LSHIFT
+  - LANG HANGEUL
   - A
   - S
   - D
@@ -25,7 +25,7 @@ layers:
   - L
   - ;
   - ''''
-  - LEFT CONTROL
+  - LEFT SHIFT
   - Z
   - X
   - C
@@ -36,15 +36,15 @@ layers:
   - ','
   - .
   - /
-  - LEFT ALT
-  - LEFT GUI
-  - NAV
-  - BSPC
+  - RIGHT SHIFT
+  - LCTRL
+  - {t: BACKSPACE, h: LEFT ALT}
+  - {t: DELETE, h: NAV}
+  - {t: RET, h: SYMBOLS}
   - SPACE
-  - SYMBOLS
-  - ENTER
+  - LEFT GUI
   SYMBOLS:
-  - {t: ▽, type: trans}
+  - '`'
   - '1'
   - '2'
   - '3'
@@ -55,8 +55,8 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: ▽, type: trans}
-  - ESC
+  - '-'
+  - '~'
   - '!'
   - '@'
   - '#'
@@ -67,7 +67,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: ▽, type: trans}
+  - _
   - {t: ▽, type: trans}
   - '`'
   - '~'
@@ -83,50 +83,50 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  NAV:
-  - LG(LC(TAB))
   - {t: ▽, type: trans}
-  - LG(LEFT BRACKET)
-  - LS(TAB)
-  - TAB
-  - LG(RIGHT BRACKET)
-  - LA(LEFT)
-  - LA(DOWN)
-  - LA(UP)
-  - LA(RIGHT)
+  NAV:
+  - Gui+Ctl+TAB
+  - {t: ▽, type: trans}
+  - Ctl+LEFT ARROW
+  - UP ARROW
+  - Ctl+RIGHT
+  - HOME
+  - '&msc SCRL_UP'
+  - Alt+DOWN
+  - UP ARROW
+  - Alt+RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ESC
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SCROLL DOWN
-  - SCROLL UP
-  - {t: ▽, type: trans}
-  - LEFT
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT
+  - Alt+LEFT ARROW
+  - Alt+RIGHT
+  - LEFT ARROW
   - DOWN
-  - UP
   - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - HOME
+  - {t: ▽, type: trans}
   - PG DN
   - PG UP
   - END
-  - LG(LEFT)
-  - LG(DOWN)
-  - LG(UP)
-  - LG(RIGHT)
+  - '&msc SCRL_DOWN'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - LC(LG(SPACE))
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   EXT:
@@ -167,10 +167,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [0, 38, 5]
