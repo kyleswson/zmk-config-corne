@@ -20,14 +20,6 @@
     *  - tap twice to put the host to sleep
     */
 
-        td_lock: tap_dance_lock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LOCK";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM>;
-            bindings = <&kp LG(LC(Q))>, <&kp LG(LA(C_EJECT))>;
-        };
-
         tabESC: tabESC {
             compatible = "zmk,behavior-tap-dance";
             label = "TABESC";
@@ -59,21 +51,10 @@
             bindings = <&kp CLCK>;
             key-positions = <5 6>;
         };
-    };
 
-    macros {
-        git_status: git_status {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S>;
-            label = "GIT_STATUS";
-        };
-
-        git_commit_all: git_commit_all {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
-            label = "GIT_COMMIT";
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
