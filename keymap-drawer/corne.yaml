@@ -181,3 +181,5 @@ combos:
   k: ENTER
 - p: [5, 6]
   k: CLCK
+- p: [0, 1]
+  k: ESCAPE
