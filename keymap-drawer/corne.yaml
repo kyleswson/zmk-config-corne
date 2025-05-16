@@ -87,16 +87,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NAV:
-  - Gui+Ctl+TAB
+  - Alt+TAB
   - {t: ▽, type: trans}
   - Ctl+LEFT ARROW
   - UP ARROW
   - Ctl+RIGHT
   - HOME
   - '&msc SCRL_UP'
-  - Alt+DOWN
+  - Ctl+LEFT
   - UP ARROW
-  - Alt+RIGHT
+  - Ctl+RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ESC
