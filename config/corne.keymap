@@ -27,6 +27,30 @@
             tapping-term-ms = <180>;
             bindings = <&kp TAB>, <&kp ESC>;
         };
+
+        L_Bracket: L_Bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L_BRACKET";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LEFT_BRACE>,
+                <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <180>;
+        };
+
+        R_Bracket: R_Bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R_BRACKET";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_PARENTHESIS>,
+                <&kp RIGHT_BRACE>,
+                <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -74,20 +98,20 @@
         symbols_layer {
             label = "SYMBOLS";
             bindings = <
-&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5       &kp N6            &kp N7             &kp N8          &kp N9           &kp N0         &kp MINUS
-&kp TILDE  &kp EXCL   &kp AT     &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET         &kp AMPS           &kp ASTERISK    &kp LPAR         &kp RPAR       &kp UNDERSCORE
-&trans     &kp GRAVE  &kp TILDE  &kp PIPE  &kp EQUAL  &kp PLUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH  &trans
-                                 &trans    &trans     &trans       &trans            &trans             &trans
+&kp PERIOD  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5        &kp N6      &kp N7    &kp N8         &kp N9    &kp N0     &kp MINUS
+&kp TILDE   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET   &kp AMPS  &kp ASTERISK   &kp LPAR  &kp RPAR   &kp UNDERSCORE
+&kp GRAVE   &trans    &trans  &trans    &trans    &L_Bracket    &R_Bracket  &trans    &kp BACKSLASH  &kp PIPE  &kp EQUAL  &kp PLUS
+                              &trans    &trans    &trans        &trans      &trans    &trans
             >;
         };
 
         nav_layer {
             label = "NAV";
             bindings = <
-&kp LA(TAB)  &trans  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp HOME              &msc SCRL_UP    &kp LC(LEFT)    &kp UP_ARROW  &kp LC(RIGHT)  &trans  &trans
-&kp ESC      &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &kp LA(LEFT_ARROW)    &kp LA(RIGHT)   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &trans  &trans
-&trans       &trans  &trans              &kp PG_DN       &kp PG_UP      &kp END               &msc SCRL_DOWN  &trans          &trans        &trans         &trans  &trans
-                                         &trans          &trans         &trans                &trans          &trans          &trans
+&kp ESCAPE     &trans  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &kp HOME              &msc SCRL_UP    &kp LC(LEFT)    &kp UP_ARROW  &kp LC(RIGHT)  &trans  &trans
+&kp LS(LG(S))  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &kp LA(LEFT_ARROW)    &kp LA(RIGHT)   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &trans  &trans
+&trans         &trans  &trans              &kp PG_DN       &kp PG_UP      &kp END               &msc SCRL_DOWN  &trans          &trans        &trans         &trans  &trans
+                                           &trans          &trans         &trans                &trans          &trans          &trans
             >;
         };
 
