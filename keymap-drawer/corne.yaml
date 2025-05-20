@@ -44,7 +44,7 @@ layers:
   - SPACE
   - LEFT GUI
   SYMBOLS:
-  - '`'
+  - .
   - '1'
   - '2'
   - '3'
@@ -68,18 +68,18 @@ layers:
   - (
   - )
   - _
-  - {t: ▽, type: trans}
   - '`'
-  - '~'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&L_Bracket'
+  - '&R_Bracket'
+  - {t: ▽, type: trans}
+  - \
   - '|'
   - '='
   - +
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - \
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -87,7 +87,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NAV:
-  - Alt+TAB
+  - ESCAPE
   - {t: ▽, type: trans}
   - Ctl+LEFT ARROW
   - UP ARROW
@@ -99,7 +99,7 @@ layers:
   - Ctl+RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESC
+  - Sft+Gui+S
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN ARROW
